@@ -1,0 +1,201 @@
+.hela {
+  background-color:white;
+  border: 0;
+}
+
+.logo-img {
+  width: 480px;
+  height: 60px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.top {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom {
+  background-color: #007691;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 30vh;
+  position: relative;
+}
+
+.bottom-href {
+  text-decoration: none;
+  color: white;
+}
+
+.bottom-table {
+  border-spacing: 40px 0;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+}
+
+.copyright {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  position: relative;
+}
+
+.content{
+  background-color:white;
+}
+
+.right {
+  float: right;
+}
+
+.fonted {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.stora {
+  font-size: 36px;
+}
+
+.lilla {
+  font-size: 18px;
+}
+
+.top-item {
+  margin-right: 5px;
+  margin-top: 13px;
+  outline: none;
+}
+
+.top-item::focus {
+  outline: none;
+}
+
+.web-hosting-table {
+  margin: 0;
+  padding: 0;
+}
+
+.get-started-button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #009EC2;
+  border-radius: 50px;
+  color: white;
+}
+
+.submit-button-create-acct {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: white;
+  border-radius: 50px;
+  color: #009EC2;
+  border-style: solid;
+}
+
+.submit-button-login {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: white;
+  border-radius: 50px;
+  color: #009EC2;
+  border-style: solid;
+}
+
+.rounded-button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #009EC2;
+  border-radius: 50px;
+  color: white;
+}
+
+.table-cell {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.login-cell {
+  background-color: #009EC2;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+}
+.create-account-cell {
+  background-color: #BFE7F0;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+}
+
+.text-input {
+  border: none;
+  border-color: transparent;
+  background: transparent;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+.td-text-input-name {
+  background-color: #009EC2;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 5px;
+  border: 0px;
+  margin: 0px;
+}
+
+.td-text-input-name-lb {
+  background-color: #BFE7F0;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 5px;
+  border: 0px;
+  margin: 0px;
+}
+
+.td-text-input-field {
+  background-color: white;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+}
+
+button:focus {
+  outline:0;
+}
+
+input:focus {
+  outline:none;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #AAAAAA;
+    opacity: 1; /* Firefox */
+}

@@ -1,0 +1,164 @@
+{% extends 'page.html' %}
+
+<!DOCTYPE html>
+<html>
+  <body class="no-margin">
+      {% block pagecontent %}
+      <br><br><br><br><br>
+      <style type="text/css">
+      .create-account-cell {
+        background-color: #BFE7F0;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding: 0px;
+        border: 0px;
+        margin: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .login-cell {
+        background-color: #009EC2;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding: 0px;
+        border: 0px;
+        margin: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .td-text-input-name {
+        background-color: #009EC2;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding: 5px;
+        border: 0px;
+        margin: 0px;
+      }
+
+      .submit-button {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        padding: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color: white;
+        border-radius: 50px;
+        color: #009EC2;
+        border-style: solid;
+      }
+
+      .td-text-input-field {
+        background-color: white;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding: 5px;
+        border: 0px;
+        margin: 0px;
+      }
+
+      .text-input {
+        border: none;
+        border-color: transparent;
+        background: transparent;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+      }
+
+      .error-box {
+        font-family: "Courier New", Courier, monospace;
+        border: 5px solid #ff5b57;
+        border-radius: 50px;
+        background-color: white;
+        color: #ff5b57;
+        width: 60%;
+        box-shadow: 0px 0px 5px gray;
+      }
+
+      button:focus {
+        outline:0;
+      }
+
+      input:focus {
+          outline:none;
+      }
+
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: #AAAAAA;
+          opacity: 1; /* Firefox */
+      }
+      </style>
+
+      {% if messages %}
+      {% for message in messages %}
+      <div align="center">
+        <div class="error-box">
+          <br><br>
+          Error:
+          <br>
+          {{ message }}
+          <br><br><br>
+        </div>
+      </div>
+      {% endfor %}
+
+      <br><br><br><br>
+      {% endif %}
+
+      <div align="center">
+      <table width="70%" cellspacing="0">
+        <tr>
+          <td class="create-account-cell fonted" width="50%">
+            <br><br>
+            <div style="font-size: 24px" align="center">Create a new account</div>
+            <br><br>
+            <form method="post" enctype="multipart/form-data" autocomplete="off">
+              <table cellspacing="0" align="center">
+                {% csrf_token %}
+                {% for field in create_form %}
+                  <tr>
+                    <td class="td-text-input-name" width="20%">{{ field.label_tag }}</td>
+                    <td class="td-text-input-field" width="80%">{{ field }}</td>
+                  </tr>
+                  <tr><td><br></td></tr>
+                {% endfor %}
+              </table>
+              <br><br>
+              <div align="center">
+                <input type="submit" value="Submit" class="submit-button"/>
+              </div>
+              <br><br>
+            </form>
+          </td>
+          <td class="login-cell fonted" width="50%">
+            <br><br><br>
+            <div style="font-size: 24px" align="center">Log in</div>
+            <br><br><br>
+            <form method="post" enctype="multipart/form-data" autocomplete="off">
+              <table cellspacing="0" align="center">
+                {% csrf_token %}
+                {% for field in login_form %}
+                  <tr>
+                    <td class="td-text-input-name-lb" width="20%">{{ field.label_tag }}</td>
+                    <td class="td-text-input-field" width="80%">{{ field }}</td>
+                  </tr>
+                  <tr><td><br></td></tr>
+                {% endfor %}
+              </table>
+              <br><br><br>
+              <div align="center">
+                <input type="submit" value="Submit" class="submit-button"/>
+              </div>
+              <br><br><br>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+      {% endblock %}
+
+  </body>
+</html>

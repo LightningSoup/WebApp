@@ -1,0 +1,106 @@
+{% extends 'page.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+  <body class="no-margin" style="width: 100%;">
+    {% block pagecontent %}
+
+    <style>
+    .desc-table {
+      background-color: #BFE7F0;
+      border-radius: 50px;
+      padding: 50px;
+      width: 80%;
+    }
+
+    .color-fonted {
+      font-family: "Courier New", Courier;
+      color: #007691;
+    }
+
+    .attention-block {
+      width: 100%;
+      background-color: #009EC2;
+      color: white;
+      font-family: "Courier New", Courier;
+    }
+
+    .hiw-list {
+      position: relative;
+      left: 10%;
+      width: 80%;
+      color: #007691;
+      border-radius: 50px;
+      padding: 25px;
+      font-family: "Courier New", Courier;
+    }
+
+    .hiw-big-text {
+      font-size: 24px;
+    }
+
+    .hiw-small-text {
+      font-size: 18px;
+    }
+
+    </style>
+
+
+    <div class="attention-block" align="center">
+      <br><br>
+      <div style="font-size: 24px;">How Lightning Soup Works</div>
+      <br><br>
+      <div>In a nutshell, I guess</div>
+      <br><br>
+    </div>
+
+    <br><br>
+
+    <div class="hiw-list">
+      <table>
+        <tr>
+          <td><img style="width: 300px; height: 300px;" src="{% static 'images/HIW-Icons/Idea 800x800.png' %}"></td>
+          <td>
+            <div class="hiw-big-text">1. You make stuff</div>
+            Easy enough. We're working on a few tools to make it easier for you.
+          </td>
+        </tr>
+        <tr><td><br><br><br><br><br><br><br><br></td></tr>
+        <tr>
+          <td><img style="width: 300px; height: 300px;" src="{% static 'images/HIW-Icons/Spec 800x800.png' %}"></td>
+          <td>
+            <div class="hiw-big-text">2. You publish your stuff</div>
+            When you publish, you get:
+            <ul>
+              <li class="hiw-small-text">Your stuff's Lightning Soup URL. Share this like a normal website link.</li>
+              <li class="hiw-small-text">Your stuff's IPFS hash. Keep this to recover your stuff in case it gets lost, or pin it to make sure it stays around forever.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr><td><br><br><br><br><br><br><br><br></td></tr>
+        <tr>
+          <td><img style="width: 300px; height: 300px;" src="{% static 'images/HIW-Icons/Revise 800x800.png' %}"></td>
+          <td>
+            <div class="hiw-big-text">3. Others improve on your stuff</div>
+            Let's face it -- none of us are perfect. That's why anything and everything can be forked and modified. Your sources aare cited for you, and everyone who builds on your work will cite you.
+          </td>
+        </tr>
+        <tr><td><br><br><br><br><br><br><br><br></td></tr>
+        <tr>
+          <td><img style="width: 300px; height: 300px;" src="{% static 'images/HIW-Icons/Circle 800x800.png' %}"></td>
+          <td>
+            <div class="hiw-big-text">4. Repeat Steps 1-3</div>
+            Innovation is an ongoing process. Like a cycle, it never ends.
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br><br><br><br>
+
+    {% endblock %}
+
+  </body>
+</html>

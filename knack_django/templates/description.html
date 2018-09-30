@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}About Us {% endblock %}</title>
+</head>
+<body>
+  {% block pagecontent %}
+    <p>
+    We are a group of Django enthusiasts with the following idiosyncrasies:
+
+    <ol>
+        <li>Dank Memes may melt steel beams, but only on sundays.</li>
+        <li>Batman is the worst superhero ever. Lego Batman is the best superhero ever.</li>
+    </ol>
+    </p>
+    <a href="{% url 'home' %}">Go Home</a>
+    <a href="{% url 'about' %}">About This Site</a>
+    {% endblock %}
+</body>
+</html>

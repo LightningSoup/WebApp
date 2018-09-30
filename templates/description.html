@@ -1,0 +1,105 @@
+{% extends 'page.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+  <body class="no-margin" style="width: 100%;">
+    {% block pagecontent %}
+
+    <style>
+    .desc-table {
+      border-radius: 50px;
+      padding: 50px;
+      width: 80%;
+    }
+
+    .color-fonted {
+      font-family: "Courier New", Courier;
+      color: #007691;
+    }
+
+    .attention-block {
+      width: 100%;
+      background-color: #009EC2;
+      color: white;
+      font-family: "Courier New", Courier;
+    }
+    </style>
+
+    <div class="attention-block" align="center">
+      <br><br><br><br>
+      <div style="font-size: 64px;">Lightning Soup</div>
+      <br><br>
+      <div>A content management and collaboration platform for the decentralized web.</div>
+      <br><br><br><br>
+    </div>
+
+    <table align="center" class="desc-table">
+      <tr>
+      <tr style="width: 50%;">
+        <td style="width: 50%;">
+          <div class="color-fonted stora">Free Speech, For Free -- Forever.</div>
+          <br>
+          <div class="color-fonted lilla" style="padding-left: 20px;">
+            <div> - No membership fees.</div>
+            <div> - No storage fees.</div>
+            <div> - No existence fees.</div>
+            <div> - No fees. Period.</div>
+          </div>
+        </td>
+        <td>
+          <img style="width: 300px; height: 300px; opacity: 0.65;" src="{% static 'images/Lightning Soup/Tabula Lossa 800x800.png' %}">
+        </td>
+      </tr>
+      <tr>
+        <td><br><br><br><br><br><br><br><br></td>
+      </tr>
+      <tr>
+        <td style="width: 50%;">
+          <div class="color-fonted stora">Collaboration at the Core.</div>
+          <br>
+          <div class="color-fonted lilla" style="padding-left: 20px;">
+            <div> - See something you can improve? Fork it and fix it. </div>
+            <div> - Sources are cited automatically. </div>
+          </div>
+        </td>
+        <td>
+          <img style="width: 300px; height: 300px;" src="{% static 'images/Lightning Soup/Collaboration 800x800.png' %}">
+        </td>
+      </tr>
+      <tr>
+        <td><br><br><br><br><br><br><br><br></td>
+      </tr>
+      <tr>
+        <td style="width: 100%;">
+          <div class="color-fonted stora">Powered By IPFS</div>
+          <br>
+          <div class="color-fonted lilla" style="padding-left: 20px;">
+            <div> - Work with objects and resources. Let us keep track of hashes for you.</div>
+            <div> - Add, pin, unpin -- you're in control. </div>
+            <div> - With publically verifiable content, you don't need to trust anyone. </div>
+          </div>
+        </td>
+        <td align="center">
+          <img style="width: 300px; height: 300px;" src="{% static 'images/Lightning Soup/Powered By IPFS 800x800.png' %}">
+        </td>
+      </tr>
+      <tr>
+        <td><br><br><br><br></td>
+      </tr>
+    </table>
+    <div>
+      <td><br><br><br><br></td>
+    </div>
+    <div align="center">
+      <button class="get-started-button" onclick="location.href='{% url 'getting_started' %}';">Get Started</button>
+    </div>
+    <div>
+      <td><br><br><br><br><br><br><br><br><br></td>
+    </div>
+    {% endblock %}
+
+  </body>
+</html>

@@ -1,0 +1,90 @@
+{% extends 'user.html' %}
+
+{% block page_title %}
+Editing "{{ post.title }}"
+{% endblock %}
+
+{% block resource_name %}
+Edit Post
+{% endblock %}
+
+{% block resource_block %}
+<div>
+  <style>
+  .create-button {
+    border: 0px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #009EC2;
+    border-radius: 50px;
+    color: white;
+    border-style: solid;
+    position: absolute;
+    left: 3%;
+    bottom: 2%;
+    margin-left: 10px;
+    box-shadow: 0px 0px 3px gray;
+  }
+
+  .gray-font {
+    color: #666666;
+  }
+  .td-text-input-field {
+    padding: 0px;
+    border: 0px;
+    border-bottom: 1px solid gray;
+    margin: 0px;
+  }
+
+  .text-input {
+    border: none;
+    border-color: transparent;
+    background: transparent;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+  }
+
+  input:focus {
+      outline:none;
+  }
+
+  </style>
+  <form method="post" enctype="multipart/form-data" autocomplete="off" width="100%">
+    {% csrf_token %}
+    <table>
+      <tr><td><br></td></tr>
+      {% for field in resource %}
+        <tr>
+          <td width="5%"></td>
+          <td class="td-text-input-name-lb fonted gray-font" width="30%">{{ field.label_tag }}</td>
+          <td class="td-text-input-field fonted" width="70%">{{ field }}</td>
+        </tr>
+        <tr><td><br></td></tr>
+      {% endfor %}
+      <tr><td><br><br></td></tr>
+    </table>
+    <br>
+    <div style="position: relative; left: 35%;">
+      <input type="submit" value="Create" class="create-button"/>
+    </div>
+  </form>
+</div>
+
+{% if resource.errors %}
+    {% for field in resource %}
+        {% for error in field.errors %}
+            <div>
+                <strong>{{ error }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in resource.non_field_errors %}
+        <div>
+            <strong>{{ error }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+{% endblock %}

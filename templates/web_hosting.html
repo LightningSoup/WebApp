@@ -1,0 +1,54 @@
+{% extends 'page.html' %}
+
+<html>
+  <body class="no-margin">
+    {% block pagecontent %}
+
+    <div style="background-color:#009EC2;">
+      <br><br><br><br><br><br><br><br><br>
+      <div align="center" class="fonted stora">What's a killer app for Knack?</div>
+      <div align="center" class="fonted lilla">Decentralized web hosting!</div>
+      <br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <br><br>
+
+    <div class="content" align="center">
+      <table width="35%" class="web-hosting-table">
+        <tr class="table-cell fonted">
+          <td>
+            No monthly fees
+            <br>
+            Instead of paying to exist, pay for the bandwidth your website needs. Or better yet, advertise.
+            <br><br><br><br>
+          </td>
+        </tr>
+        <tr class="table-cell fonted">
+          <td>
+            Ease of advertising
+            <br>
+            Put advertisements on your webpages with a single line of HTML, or pay to have your ads featured on other people's pages.
+            <br><br><br>
+          </td>
+        </tr>
+        <tr class="table-cell fonted">
+          <td>
+            Pay in Ether
+            <br>
+            Or Bitcoin. Or Ripple. Maybe even Monero. We're open to change.
+            <br><br><br><br><br>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <br><br>
+
+    <div align="center">
+      <button class="get-started-button" onclick="location.href='{% url 'getting_started' %}';">Get Started</button>
+    </div>
+
+    <br><br><br>
+    {% endblock %}
+  </body>
+</html>

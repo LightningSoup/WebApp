@@ -1,0 +1,84 @@
+{% extends 'page.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+  <body class="no-margin" style="width: 100%;">
+    {% block pagecontent %}
+
+    <style>
+    .desc-table {
+      background-color: #BFE7F0;
+      border-radius: 50px;
+      padding: 50px;
+      width: 80%;
+    }
+
+    .color-fonted {
+      font-family: "Courier New", Courier;
+      color: #007691;
+    }
+
+    .attention-block {
+      width: 100%;
+      background-color: #009EC2;
+      color: white;
+      font-family: "Courier New", Courier;
+    }
+
+    .contribute-list {
+      position: relative;
+      left: 10%;
+      width: 80%;
+      color: #007691;
+      font-family: "Courier New", Courier;
+    }
+
+    .contribute-big-text {
+      font-size: 24px;
+    }
+
+    .contribute-small-text {
+      font-size: 18px;
+    }
+
+    </style>
+
+    <div class="attention-block" align="center">
+      <br><br>
+      <div style="font-size: 24px;">How To Contribute To Lightning Soup</div>
+      <br><br>
+      <div>Here are a bunch of ways you can make Lightning Soup better.</div>
+      <br><br>
+      <div>plz help</div>
+      <br><br>
+    </div>
+
+    <br><br>
+
+    <div class="contribute-list">
+      <p>
+        <div class="contribute-big-text">Web Design/Graphics</div>
+        <ul>
+        <li class="contribute-small-text">The graphics for the website were uploaded <a href="/">here</a>. Feel free to fork and edit!</li>
+        </ul>
+        <br>
+        <div class="contribute-big-text">IPFS</div>
+        <ul>
+        <li>Lightning Soup is dependent on the <a href="/">IPFS Project</a>. Supportng them supports us!</li>
+        </ul>
+        <div class="contribute-big-text">Feedback</div>
+        <ul>
+        <li>Feedback is <b><u>by far</u></b> the most important resource to Lightning Soup. Submit yours by emailing it <a href="tjjohansson98@gmail.com">here</a>!</li>
+        </ul>
+      </p>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    {% endblock %}
+
+  </body>
+</html>

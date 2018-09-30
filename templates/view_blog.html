@@ -1,0 +1,99 @@
+{% extends 'user.html' %}
+
+{% block page_title %}
+Information about "{{ blog.title }}"
+{% endblock %}
+
+{% block resource_name %}
+Information about "{{ blog.title }}"
+{% endblock %}
+
+{% block resource_block %}
+<div>
+  <style>
+  .create-button {
+    border: 0px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #009EC2;
+    border-radius: 50px;
+    color: white;
+    border-style: solid;
+    margin-left: 10px;
+    box-shadow: 0px 0px 3px gray;
+  }
+
+  .gray-font {
+    color: #666666;
+  }
+  .td-text-input-field {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+  }
+
+  .text-input {
+    border: none;
+    border-color: transparent;
+    background: transparent;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+  }
+
+  input:focus {
+      outline:none;
+  }
+
+  </style>
+  <table>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="5%"></td>
+      <td class="td-text-input-name-lb fonted gray-font" width="30%">Title</td>
+      <td class="td-text-input-field fonted" width="70%">{{ blog.title }}</td>
+    </tr>
+    <tr>
+      <td width="5%"></td>
+      <td class="td-text-input-name-lb fonted gray-font" width="30%">URL</td>
+      <td class="td-text-input-field fonted" width="70%">{{ blog.name }}</td>
+    </tr>
+    <tr>
+      <td width="5%"></td>
+      <td class="td-text-input-name-lb fonted gray-font" width="30%">IPFS Hash</td>
+      <td class="td-text-input-field fonted" width="70%">{{ blog.homepage_hash }}</td>
+    </tr>
+    <tr>
+      <td width="5%"></td>
+      <td class="td-text-input-name-lb fonted gray-font" width="30%">Birthday</td>
+      <td class="td-text-input-field fonted" width="70%">{{ blog.birthday }}</td>
+    </tr>
+    <tr>
+      <td width="5%"></td>
+      <td class="td-text-input-name-lb fonted gray-font" width="30%">Creator</td>
+      <td class="td-text-input-field fonted" width="70%">{{ blog.owner }}</td>
+    </tr>
+    {% if blog.forkof %}
+    <tr>
+      <td width="5%"></td>
+      <td class="td-text-input-name-lb fonted gray-font" width="30%">Fork of</td>
+      <td class="td-text-input-field fonted" width="70%">{{ blog.forkof }}</td>
+    </tr>
+    {% endif %}
+    <tr><td><br></td></tr>
+  </table>
+  <div style="float: left;">
+    <input type="submit" value="Go to Blog" class="create-button" onclick="location.href = '{% url 'user' blog.owner %}{{ blog.name }}'"/>
+  </div>
+  {% if request.user.is_authenticated and request.user.username == user.username %}
+  <div style="float: left;">
+    <input type="submit" value="Edit Blog" class="create-button" onclick="location.href = '{% url 'user' blog.owner %}{{ blog.name }}/edit'"/>
+  </div>
+  {% endif %}
+  <div style="float: left;">
+    <input type="submit" value="Fork" class="create-button" onclick="location.href = '{% url 'user' blog.owner %}{{ blog.name }}/fork'"/>
+  </div>
+</div>
+{% endblock %}

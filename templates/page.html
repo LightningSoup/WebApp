@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <haed>
+    <title>
+      Lightning Soup
+    </title>
+  </head>
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+  <body class="no-margin">
+    <div class="top no-margin" height="50">
+      <a  href="{% url 'description' %}" class="top-item"><img class="inline logo-img" src="{% static 'images/Top Left 2000x250.png' %}"></a>
+      <div class="right" height="50">
+        <a href="{% url 'getting_started' %}" class="top-item"><div class="inline top-item rounded-button">Get Started</div></a>
+        <a href="{% url 'how_it_works' %}" class="top-item"><div class="inline top-item rounded-button">How It Works</div></a>
+        <a href="{% url 'contribute' %}" class="top-item"><div class="inline top-item rounded-button">Contribute</div></a>
+      </div>
+    </div>
+    {% block pagecontent %}
+    {% endblock %}
+    <div class="bottom no-margin" height="50">
+      <br><br>
+
+      <div align="center">
+        <table class="bottom-table">
+          <tr>
+          <td style="font-size: 24px;">Get Involved</td>
+          <td style="font-size: 24px;">Lightning Soup</td>
+          </tr>
+          <tr>
+          <td><br></td>
+          <td><br></td>
+          </tr>
+          <tr>
+          <td><a href="https://twitter.com/TedJohansson7">Twitter</a></td>
+          <td><a href="{% url 'description' %}" class="bottom-href">Description</a></td>
+          </tr>
+          <tr>
+          <td><a href="teddyjo@live.com">Email</a></td>
+          <td><a href="{% url 'how_it_works' %}" class="bottom-href">How It Works</a></td>
+          </tr>
+          <tr>
+          <td></td>
+          <td><a href="{% url 'getting_started' %}" class="bottom-href">Getting Started</a></td>
+          </tr>
+          <tr>
+          <td></td>
+          <td><a href="{% url 'contribute' %}" class="bottom-href">Contribute</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="copyright" align="center">
+        <br>
+        <p>Copyright &copy 2018 by Theodor Johansson. All Rights Reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
